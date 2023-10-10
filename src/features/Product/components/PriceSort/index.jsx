@@ -20,6 +20,7 @@ function PriceSort(props) {
         const { name, value } = e.target;
         setValues(prevValues => ({
             ...prevValues,
+            Page: 1,
             [name]: value,
         }))
     };
