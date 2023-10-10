@@ -1,0 +1,19 @@
+.productDiv {
+  padding: 35px !important;
+  cursor: pointer;
+
+  &__title {
+    width: 191px !important;
+    min-height: 41px !important;
+    margin-top: 10px !important;
+    font-size: 15px !important;
+    color: #00134c !important;
+    font-weight: 500 !important;
+  }
+
+  &__price {
+    font-size: 20px !important;
+    color: #fb7421 !important;
+    font-weight: 700 !important;
+  }
+}

@@ -26,6 +26,7 @@ function CategoryList(props) {
         })();
     }, []);
 
+
     return (
         <Box className='cateSection'>
             <Typography variant='h4' className='cateTitle'>YOUR STYLE, YOUR CHOICE</Typography>

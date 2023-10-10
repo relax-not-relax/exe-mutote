@@ -37,13 +37,13 @@ function BestSellerList(props) {
                 </Typography>
                 <Grid container spacing={10}>
                     {bestList.map((best) => (
-                        <Grid item key={best.id}>
+                        <Grid item key={best.id} md={4} lg={4}>
                             <BestSeller bestSeller={best} />
                         </Grid>
                     ))}
                 </Grid>
                 <div className='actBtnDiv'>
-                    <NavLink className="act-btn" to='/'>
+                    <NavLink className="act-btn" to='/products'>
                         <Button color="inherit" className="act-btn-dt">See more</Button>
                     </NavLink>
                 </div>

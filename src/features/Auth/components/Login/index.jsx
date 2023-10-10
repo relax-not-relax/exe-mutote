@@ -28,7 +28,9 @@ function Login(props) {
                 closeDialog();
             }
 
-            //do something here on register successfully         
+            //do something here on register successfully  
+            window.location.reload();
+
 
         } catch (error) {
             console.log('Failed to register user: ', error);

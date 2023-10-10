@@ -7,7 +7,7 @@ const productAPI = {
     },
 
     getBestSeller(params) {
-        const url = "/products?Page=1&PageSize=10&isBestSeller=true";
+        const url = "/products?Page=1&PageSize=9&isBestSeller=true";
         return axiosClient.get(url, { params });
     },
 

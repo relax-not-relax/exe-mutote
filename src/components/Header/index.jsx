@@ -10,10 +10,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
+import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import Login from '../../features/Auth/components/Login';
 import Register from '../../features/Auth/components/Register';
 import { logout } from '../../features/Auth/userSlice';
+import { cartItemsCountSelector } from '../../features/Cart/selector';
 import './style.scss';
 
 const MODE = {
@@ -65,9 +67,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Header() {
     const loggedInUser = useSelector(state => state.user.current);
-    // const cartItemsCount = useSelector(cartItemsCountSelector);
+    const cartItemsCount = useSelector(cartItemsCountSelector);
     const isLoggedIn = !!loggedInUser.id;
-    // const history = useHistory();
+    const history = useHistory();
 
     const [open, setOpen] = useState(false);
     const [mode, setMode] = useState(MODE.LOGIN);
@@ -93,12 +95,13 @@ export default function Header() {
     const handleLogout = () => {
         const action = logout();
         dispatch(action);
+        window.location.reload();
         setAnchorEl(null);
     };
 
-    // const handleCartClick = () => {
-    //     history.push('/cart');
-    // };
+    const handleCartClick = () => {
+        history.push('/cart');
+    };
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -122,12 +125,16 @@ export default function Header() {
                         />
                     </Search>
 
-                    <Button color="inherit">
-                        SHOP
-                    </Button>
+                    <NavLink className="Menu-Btn" to='/products'>
 
-                    <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                        <Badge badgeContent={0} color="error">
+                        <Button color="inherit">
+                            SHOP
+                        </Button>
+
+                    </NavLink>
+
+                    <IconButton size="large" aria-label="show 4 new mails" color="inherit" onClick={handleCartClick}>
+                        <Badge badgeContent={cartItemsCount} color="error">
                             <ShoppingCart />
                         </Badge>
                     </IconButton>
@@ -141,12 +148,6 @@ export default function Header() {
                             LOGIN
                         </Button>
                     )}
-
-                    {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit" onClick={handleCartClick}>
-                        <Badge badgeContent={cartItemsCount} color="error">
-                            <ShoppingCart />
-                        </Badge>
-                    </IconButton> */}
 
                     {isLoggedIn && (
                         <IconButton color="inherit" onClick={handleUserClick}>

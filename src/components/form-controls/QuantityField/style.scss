@@ -1,0 +1,13 @@
+.box {
+  margin-top: 8px !important;
+  display: flex;
+  flex-flow: row nowrap !important;
+  align-items: center !important;
+  max-width: 150px;
+}
+
+.form-control {
+  input {
+    text-align: center;
+  }
+}

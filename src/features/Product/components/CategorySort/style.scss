@@ -1,0 +1,27 @@
+.cateDiv {
+  padding: 30px;
+
+  &__title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+    color: #00134c !important;
+  }
+
+  &__menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none !important;
+
+    li {
+      margin-top: 8px !important;
+      transition: 0.25s;
+
+      &:hover {
+        cursor: pointer;
+        color: #1976d2;
+        font-weight: 600 !important;
+      }
+    }
+  }
+}
