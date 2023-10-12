@@ -33,7 +33,7 @@ function Login(props) {
 
 
         } catch (error) {
-            console.log('Failed to register user: ', error);
+            console.log('Failed to get user: ', error);
             enqueueSnackbar(error.message, { variant: 'error' });
         }
     };

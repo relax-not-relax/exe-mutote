@@ -1,0 +1,56 @@
+.checkoutDiv {
+  margin-top: 50px !important;
+
+  &__header {
+    font-size: 30px !important;
+    margin-bottom: 30px !important;
+    font-weight: 500 !important;
+    background: #f0f0f0 !important;
+    color: #00134c !important;
+    padding: 20px !important;
+  }
+
+  &__left {
+    padding: 30px !important;
+    border-right: 10px solid #f8f8f8 !important;
+
+    .name {
+      padding: 15px 0 15px 15px !important;
+      width: auto !important;
+      background: #f5f5f5 !important;
+      margin-top: 8px !important;
+      color: #adb5c4;
+    }
+
+    &-note {
+      font-size: 14px !important;
+      font-style: italic;
+      margin-top: 20px !important;
+      color: #fd4d4d !important;
+    }
+  }
+
+  &__right {
+    padding: 30px !important;
+  }
+}
+
+.rightDivCheckout {
+  flex: 1 1 0 !important;
+  padding: 30px !important;
+  height: fit-content !important;
+
+  &__item {
+    margin-bottom: 10px !important;
+
+    &-name {
+      color: #7a7a7a !important;
+      font-size: 15px !important;
+    }
+
+    &-quantity {
+      color: #fb7421 !important;
+      text-align: end;
+    }
+  }
+}

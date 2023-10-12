@@ -1,0 +1,13 @@
+.cartItemDiv {
+  margin-bottom: 15px !important;
+
+  &__img {
+    cursor: pointer;
+  }
+
+  &__price {
+    margin-top: 10px !important;
+    color: #fb7421 !important;
+    font-weight: 500 !important;
+  }
+}

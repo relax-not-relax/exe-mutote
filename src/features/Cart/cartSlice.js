@@ -1,5 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const saveCartToLocalStorage = (cart) => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+};
+
+
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
@@ -18,28 +23,39 @@ const cartSlice = createSlice({
         addToCart(state, action) {
             //newItem = { id, product, quantity }
             const newItem = action.payload;
-            const index = state.cartItems.findIndex((x) => x.id === newItem.id);
+            const updatedCart = [...state.cartItems];
+            const index = updatedCart.findIndex((x) => x.id === newItem.id);
             if (index >= 0) {
                 //increase quantity
-                state.cartItems[index].quantity += newItem.quantity;
+                updatedCart[index].quantity += newItem.quantity;
             } else {
                 //add to cart
-                state.cartItems.push(newItem);
+                updatedCart.push(newItem);
             }
+            state.cartItems = updatedCart;
+            saveCartToLocalStorage(updatedCart);
         },
 
         setQuantity(state, action) {
             const { id, quantity } = action.payload;
             //check if product is available in cart
-            const index = state.cartItems.findIndex((x) => x.id === id);
+            const updatedCart = [...state.cartItems];
+            const index = updatedCart.findIndex((x) => x.id === id);
             if (index >= 0) {
-                state.cartItems[index].quantity = quantity;
+                updatedCart[index].quantity = quantity;
             }
+            state.cartItems = updatedCart;
+            saveCartToLocalStorage(updatedCart);
         },
 
         removeFromCart(state, action) {
-            const idNeedToRemove = action.payload;
-            state.cartItems = state.cartItems.filter((x) => x.id !== idNeedToRemove);
+            const idNeedToRemove = action.payload.idNeedToRemove;
+            const updatedCart = [...state.cartItems];
+            const newCart = updatedCart.filter((x) => x.id !== Number.parseInt(idNeedToRemove));
+            //console.log(Number.parseInt(idNeedToRemove));
+            //console.log(newCart);
+            state.cartItems = newCart;
+            saveCartToLocalStorage(newCart);
         },
     }
 });

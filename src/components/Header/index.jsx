@@ -134,6 +134,7 @@ export default function Header() {
                     </NavLink>
 
                     <IconButton size="large" aria-label="show 4 new mails" color="inherit" onClick={handleCartClick}>
+
                         <Badge badgeContent={cartItemsCount} color="error">
                             <ShoppingCart />
                         </Badge>

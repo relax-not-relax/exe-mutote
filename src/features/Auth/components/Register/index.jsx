@@ -33,7 +33,7 @@ function Register(props) {
 
         } catch (error) {
             console.log('Failed to register user: ', error);
-            enqueueSnackbar(error.message, { variant: 'error' });
+            enqueueSnackbar('Email or Phone number is invalid!', { variant: 'error' });
         }
     };
 

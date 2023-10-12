@@ -1,0 +1,61 @@
+.leftDivCart {
+  width: 800px !important;
+  padding: 30px 10px 15px 30px !important;
+  border-right: 10px solid #f8f8f8 !important;
+}
+
+.rightDivCart {
+  flex: 1 1 0 !important;
+  padding: 30px !important;
+  height: fit-content !important;
+
+  &__item {
+    margin-bottom: 10px !important;
+
+    &-name {
+      color: #7a7a7a !important;
+      font-size: 15px !important;
+    }
+
+    &-quantity {
+      color: #fb7421 !important;
+    }
+  }
+
+  &__total {
+    margin-top: 40px !important;
+
+    &-hd {
+      font-size: 20px !important;
+      color: #7a7a7a;
+    }
+
+    &-price {
+      font-size: 25px !important;
+      text-align: end;
+      color: #fd4d4d !important;
+      font-weight: 500 !important;
+    }
+  }
+
+  &__btn {
+    padding-top: 30px !important;
+
+    &-dt {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.cartDiv {
+  margin-top: 50px !important;
+
+  &__header {
+    font-size: 30px !important;
+    margin-bottom: 30px !important;
+    font-weight: 500 !important;
+    background: #f0f0f0 !important;
+    color: #00134c !important;
+    padding: 20px !important;
+  }
+}
