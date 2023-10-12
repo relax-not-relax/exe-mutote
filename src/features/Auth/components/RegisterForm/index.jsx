@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import './style.scss';
-import { useForm } from 'react-hook-form';
-import { Avatar, Box, Button, Dialog, DialogActions, DialogContent, LinearProgress, Typography } from '@mui/material';
 import { LockOutlined } from '@mui/icons-material';
+import { Avatar, Button, LinearProgress, Typography } from '@mui/material';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 import InputField from '../../../../components/form-controls/InputField';
 import PasswordField from '../../../../components/form-controls/PasswordField';
+import './style.scss';
 
 RegisterForm.propTypes = {
     onSubmit: PropTypes.func,
@@ -44,15 +44,6 @@ function RegisterForm(props) {
         resolver: yupResolver(schema),
     })
 
-    const [open, setOpen] = useState(false);
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
     const handleSubmit = async (values) => {
         //console.log('TODO FORM: ', values);
         const { onSubmit } = props;
@@ -88,23 +79,6 @@ function RegisterForm(props) {
                 <Button disabled={isSubmitting} type='submit' fullWidth variant='contained' color='primary' className="registerForm__btn">
                     Sign Up
                 </Button>
-
-                <Box textAlign="center">
-                    <Button color="primary" onClick={handleClickOpen}>
-                        VERIFY PHONE NUMBER
-                    </Button>
-                </Box>
-
-                <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
-                    <DialogContent>
-
-                        Verify
-
-                    </DialogContent>
-                    <DialogActions>
-                        <Button onClick={handleClose}>Cancel</Button>
-                    </DialogActions>
-                </Dialog>
             </form>
         </div>
     );
