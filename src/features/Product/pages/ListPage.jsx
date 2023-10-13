@@ -8,6 +8,7 @@ import PriceSort from '../components/PriceSort';
 import ProductList from '../components/Product/ProductList';
 import ProductSkeletonList from '../components/Product/ProductSkeletonList';
 import ProductSort from '../components/Product/ProductSort';
+import SearchNameSort from '../components/SearchNameSort';
 import ServiceSort from '../components/ServiceSort';
 import './style.scss';
 
@@ -140,6 +141,7 @@ function ListPage(props) {
                 <Grid container spacing={1}>
                     <Grid item className='leftDiv'>
                         <Paper elevation={0}>
+                            <SearchNameSort onChange={handleFiltersChange} />
                             <CategorySort onChange={handleCategoryChange} onReset={handleReset} />
                             <PriceSort onChange={handleFiltersChange} />
                             <ServiceSort filters={queryParams} onChange={handleFiltersChange} />

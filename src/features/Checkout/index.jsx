@@ -59,6 +59,7 @@ function CheckoutFeature(props) {
         resolver: yupResolver(schema),
     })
 
+
     const handleSubmit = async (values) => {
 
         try {
@@ -72,7 +73,8 @@ function CheckoutFeature(props) {
             enqueueSnackbar(`Thank you for your submitting! Please wait for MUTOTE's contact.`, { variant: 'success' });
             localStorage.removeItem('cart');
             setTimeout(() => {
-                window.location.reload();
+
+                window.location.href = '/home';
             }, 3000);
         } catch (error) {
             console.log('Failed to submit order', error);

@@ -1,11 +1,8 @@
 import { AccountCircle, Logout, ShoppingCart } from '@mui/icons-material';
-import SearchIcon from '@mui/icons-material/Search';
 import { Avatar, Badge, Dialog, DialogActions, DialogContent, Divider, IconButton, ListItemIcon, Menu, MenuItem } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import InputBase from '@mui/material/InputBase';
-import { alpha, styled } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
@@ -22,48 +19,6 @@ const MODE = {
     LOGIN: 'login',
     REGISTER: 'register',
 }
-
-const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
-        width: 'auto',
-    },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            width: '12ch',
-            '&:focus': {
-                width: '20ch',
-            },
-        },
-    },
-}));
 
 export default function Header() {
     const loggedInUser = useSelector(state => state.user.current);
@@ -103,6 +58,11 @@ export default function Header() {
         history.push('/cart');
     };
 
+    const handlePageChange = () => {
+        history.push('/user');
+        setAnchorEl(null);
+    }
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="sticky">
@@ -112,18 +72,6 @@ export default function Header() {
                             <img src="https://firebasestorage.googleapis.com/v0/b/nearex-1b8f7.appspot.com/o/images%2Flogo-1.png?alt=media&token=78a5d73b-32c4-4380-84a4-ec80369abcb1" alt="" style={{ width: "100px", height: "100px" }} />
                         </Link>
                     </Typography>
-
-
-
-                    <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </Search>
 
                     <NavLink className="Menu-Btn" to='/products'>
 
@@ -193,7 +141,7 @@ export default function Header() {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <MenuItem onClick={handleCloseMenu}>
+                <MenuItem onClick={handlePageChange}>
                     <Avatar /> Profile
                 </MenuItem>
                 <Divider />

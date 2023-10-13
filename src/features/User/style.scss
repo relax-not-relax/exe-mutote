@@ -1,0 +1,30 @@
+.avatarDiv {
+  padding: 30px 20px !important;
+
+  &__hd {
+    display: flex;
+    justify-content: center;
+    .avatar {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &__tt {
+    text-align: center !important;
+    margin-top: 15px !important;
+    font-size: 20px !important;
+    font-weight: 500;
+  }
+
+  .logoutIcon {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8px !important;
+  }
+}
+
+.historyOrder {
+  padding: 20px 0 !important;
+  background: #ededed !important;
+}

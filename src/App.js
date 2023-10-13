@@ -6,6 +6,7 @@ import CartFeature from './features/Cart';
 import CheckoutFeature from './features/Checkout';
 import HomeFeature from './features/Home';
 import ProductFeature from './features/Product';
+import UserFeature from './features/User';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/products' component={ProductFeature} />
         <Route path='/cart' component={CartFeature} />
         <Route path='/checkout' component={CheckoutFeature} />
+        <Route path='/user' component={UserFeature} />
 
       </Switch>
 
