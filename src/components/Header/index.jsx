@@ -50,6 +50,7 @@ export default function Header() {
     const handleLogout = () => {
         const action = logout();
         dispatch(action);
+        history.push('/home');
         window.location.reload();
         setAnchorEl(null);
     };
