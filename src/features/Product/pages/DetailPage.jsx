@@ -63,7 +63,7 @@ function DetailPage(props) {
     };
 
     return (
-        <Box>
+        <Box pt={6}>
             <Container className='productDtDiv'>
 
                 <Paper elevation={0}>
