@@ -30,6 +30,9 @@ function Register(props) {
             //do something here on register successfully         
             console.log('New user: ', user);
             enqueueSnackbar('Register successfully', { variant: 'success' });
+            setTimeout(() => {
+                window.location.reload();
+            }, 1500);
 
         } catch (error) {
             console.log('Failed to register user: ', error);

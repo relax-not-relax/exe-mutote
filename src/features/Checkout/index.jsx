@@ -73,7 +73,6 @@ function CheckoutFeature(props) {
             enqueueSnackbar(`Thank you for your submitting! Please wait for MUTOTE's contact.`, { variant: 'success' });
             localStorage.removeItem('cart');
             setTimeout(() => {
-
                 window.location.href = '/home';
             }, 3000);
         } catch (error) {
