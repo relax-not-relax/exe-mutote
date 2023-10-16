@@ -13,29 +13,23 @@ function Footer() {
             <Container className='footer-dt'>
                 <Grid container spacing={2} columns={{ md: 12 }}>
                     <Grid item md={3}>
-                        <Typography variant='body1' className='footer-tt'>COMPANY INFO</Typography>
+                        <Typography variant='body1' className='footer-tt'>VỀ MUTOTE</Typography>
                         <Box>
-                            <Link to="/" className='footer-link'>About MUTOTE</Link><br />
-                            <Link to="/" className='footer-link'>Social Responsibility</Link><br />
-                            <Link to="/" className='footer-link'>Fashion Blogger</Link><br />
-                            <Link to="/" className='footer-link'>Careers</Link><br />
-                            <Link to="/" className='footer-link'>Student Discount</Link><br />
+                            <Link to="/about" className='footer-link'>Câu chuyện của chúng tôi</Link><br />
+                            <Link to="/faqs" className='footer-link'>FAQs</Link><br />
                         </Box>
 
                     </Grid>
 
                     <Grid item md={3}>
-                        <Typography variant='body1' className='footer-tt'>HELP & SUPPORT</Typography>
-                        <Link to="/" className='footer-link'>Shipping info</Link><br />
-                        <Link to="/" className='footer-link'>How to Order</Link><br />
-                        <Link to="/" className='footer-link'>how to track</Link><br />
+                        <Typography variant='body1' className='footer-tt'>Customer Care</Typography>
+                        <Link to="/return" className='footer-link'>Chính sách đổi trả</Link><br />
+                        <Link to="/" className='footer-link'>Chính sách giao hàng</Link><br />
+                        <Link to="/" className='footer-link'>Chính sách thanh toán</Link><br />
                     </Grid>
 
                     <Grid item md={3}>
-                        <Typography variant='body1' className='footer-tt'>Customer Care</Typography>
-                        <Link to="/" className='footer-link'>Contact Us</Link><br />
-                        <Link to="/" className='footer-link'>Payment & Tax</Link><br />
-                        <Typography variant='body1' className='footer-tt-2'>Focus us on</Typography>
+                        <Typography variant='body1' className='footer-tt'>Focus us on</Typography>
                         <Link to="/" className='footer-link'>
                             <Facebook />
                         </Link>
