@@ -32,7 +32,7 @@ function ShippingFeature(props) {
                 <Box marginTop={8}>
                     <Typography style={{ fontWeight: '700' }}>THỜI GIAN VẬN CHUYỂN TRUNG BÌNH</Typography>
                     <ul style={{ marginTop: '32px' }}>
-                        <li><span style={{ fontWeight: '700' }}>Đơn nội thành Hồ Chí Minh: </span>Khách hàng sẽ nhận được trong vòng 24h kể từ khi đơn hàng được xác nhận (trừ trường hợp đơn hàng dạng đặt trước hoặc chưa đủ tồn kho, CSKH của Coolmate sẽ thông báo cho khách hàng về vấn đề này qua số điện thoại bạn cung cấp ở đơn order). Thông thường có thể sớm hơn tuỳ thuộc vào thời gian khách hàng đặt (Không tính chủ nhật và ngày lễ)</li>
+                        <li><span style={{ fontWeight: '700' }}>Đơn nội thành Hồ Chí Minh: </span>Khách hàng sẽ nhận được trong vòng 24h kể từ khi đơn hàng được xác nhận (trừ trường hợp đơn hàng dạng đặt trước hoặc chưa đủ tồn kho, CSKH của MUTOTE sẽ thông báo cho khách hàng về vấn đề này qua số điện thoại bạn cung cấp ở đơn order). Thông thường có thể sớm hơn tuỳ thuộc vào thời gian khách hàng đặt (Không tính chủ nhật và ngày lễ)</li>
                     </ul>
                     <img
                         src="https://firebasestorage.googleapis.com/v0/b/nearex-1b8f7.appspot.com/o/images%2Fdistrict.png?alt=media&token=0b3f137b-a872-478b-ad1a-eb6ef4a19e1e"
