@@ -54,7 +54,7 @@ function FaqsFeature(props) {
                         <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <strong>MUTOTE giao giờ hành chính. </strong>
-                                Đối với nội thành Thành phố Hồ Chí Mình các bạn có thể liên hệ với tụi mình qua <a href="https://www.facebook.com/mutotevn">fanpage</a> thời gian phù hợp để giao hàng nhé!
+                                Đối với nội thành Thành phố Hồ Chí Mình các bạn có thể liên hệ với tụi mình qua <a href="https://www.facebook.com/mutotevn" target="_blank" rel="noreferrer">fanpage</a> thời gian phù hợp để giao hàng nhé!
                             </div>
                         </div>
                     </div>
@@ -67,8 +67,8 @@ function FaqsFeature(props) {
                         <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <strong>Hiện tại MUTOTE không có cửa hàng, </strong>
-                                Chúng mình hiện đang kinh doanh dưới hình thức online qua <a href="https://www.facebook.com/mutotevn">fanpage</a> và website. <br />
-                                Bạn hãy theo dõi <a href="https://www.facebook.com/mutotevn">fanpage</a> để được cập nhật những sản phẩm mới nhất nha!
+                                Chúng mình hiện đang kinh doanh dưới hình thức online qua <a href="https://www.facebook.com/mutotevn" target="_blank" rel="noreferrer">fanpage</a> và website. <br />
+                                Bạn hãy theo dõi <a href="https://www.facebook.com/mutotevn" target="_blank" rel="noreferrer">fanpage</a> để được cập nhật những sản phẩm mới nhất nha!
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ function FaqsFeature(props) {
                             <div className="accordion-body">
                                 Quy trình đổi hàng tại MUTOTE rất dễ dàng <br />
                                 <strong>Bước 1: </strong>
-                                Bạn hãy liên hệ với MUTOTE tại <a href="https://www.facebook.com/mutotevn">fanpage</a> bằng cách nhắn tin hoặc để lại lời nhắn ở bình luận, chúng mình sẽ trực tiếp liên hệ. <br />
+                                Bạn hãy liên hệ với MUTOTE tại <a href="https://www.facebook.com/mutotevn" target="_blank" rel="noreferrer">fanpage</a> bằng cách nhắn tin hoặc để lại lời nhắn ở bình luận, chúng mình sẽ trực tiếp liên hệ. <br />
                                 <strong>Bước 2: </strong>
                                 Sau khi nhận được phản hồi từ MUTOTE, bạn hãy dẫn link sản phẩm bạn muốn thay đổi cho tụi mình. <br />
                                 <strong>Bước 3: </strong>
@@ -114,7 +114,7 @@ function FaqsFeature(props) {
                             <div className="accordion-body">
                                 Quy trình trả hàng tại MUTOTE rất dễ dàng <br />
                                 <strong>Bước 1: </strong>
-                                Bạn hãy liên hệ với MUTOTE tại <a href="https://www.facebook.com/mutotevn">fanpage</a> bằng cách nhắn tin hoặc để lại lời nhắn ở bình luận, chúng mình sẽ trực tiếp liên hệ. <br />
+                                Bạn hãy liên hệ với MUTOTE tại <a href="https://www.facebook.com/mutotevn" target="_blank" rel="noreferrer">fanpage</a> bằng cách nhắn tin hoặc để lại lời nhắn ở bình luận, chúng mình sẽ trực tiếp liên hệ. <br />
                                 <strong>Bước 2: </strong>
                                 Sau khi nhận được phản hồi từ MUTOTE, MUTOTE sẽ xác nhận về tình trạng đơn hàng của bạn, nếu bạn chưa thanh toán, rất tiếc quá trình thay đổi đơn hàng sẽ không được diễn ra.
                                 Nếu bạn đã thanh toán đơn hàng cho MUTOTE, nếu như đơn hàng đã được giao thành công cho bạn, bạn sẽ phải chịu phần phí ship để gửi trả hàng cho tụi mình! <br />

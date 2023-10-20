@@ -24,18 +24,18 @@ function Footer() {
                     <Grid item md={3}>
                         <Typography variant='body1' className='footer-tt'>Customer Care</Typography>
                         <Link to="/return" className='footer-link'>Chính sách đổi trả</Link><br />
-                        <Link to="/" className='footer-link'>Chính sách giao hàng</Link><br />
-                        <Link to="/" className='footer-link'>Chính sách thanh toán</Link><br />
+                        <Link to="/shipping" className='footer-link'>Chính sách giao hàng</Link><br />
+                        <Link to="/payment" className='footer-link'>Chính sách thanh toán</Link><br />
                     </Grid>
 
                     <Grid item md={3}>
                         <Typography variant='body1' className='footer-tt'>Focus us on</Typography>
-                        <Link to="/" className='footer-link'>
+                        <a href="https://www.facebook.com/mutotevn" className='footer-link' target="_blank" rel="noreferrer">
                             <Facebook />
-                        </Link>
-                        <Link to="/" className='footer-link'>
+                        </a>
+                        <a href="https://www.instagram.com/mutote.vn?fbclid=IwAR3ZQfc3F91AhOZtml9GZ_UHMsRQXYHb4kU-7QvqyPen-kQ8urU8O9lxSo4" className='footer-link' target="_blank" rel="noreferrer">
                             <Instagram />
-                        </Link><br />
+                        </a><br />
                     </Grid>
 
                     <Grid item md={3}>

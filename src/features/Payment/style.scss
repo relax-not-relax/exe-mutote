@@ -1,0 +1,19 @@
+.step {
+  font-size: 90px;
+  font-weight: 700 !important;
+
+  &__des {
+    padding-right: 50px;
+  }
+}
+
+.step1 {
+  font-size: 90px;
+  font-weight: 700 !important;
+  text-align: end;
+
+  &__des {
+    padding-left: 20px;
+    text-align: end;
+  }
+}

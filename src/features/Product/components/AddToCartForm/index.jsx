@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as yup from 'yup';
-import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import QuantityField from '../../../../components/form-controls/QuantityField';
 import { Button, Grid } from '@mui/material';
-import './style.scss'
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import QuantityField from '../../../../components/form-controls/QuantityField';
+import './style.scss';
 
 AddToCartForm.propTypes = {
     onSubmit: PropTypes.func,
@@ -41,7 +41,7 @@ function AddToCartForm(props) {
             <form onSubmit={form.handleSubmit(handleSubmit)}>
                 <Grid container>
                     <Grid item>
-                        <QuantityField name='quantity' label='Quantity' form={form} errors={form.formState.errors} />
+                        <QuantityField name='quantity' label='Quantity' form={form} errors={form.formState.errors} defaultQuantity />
                     </Grid>
                     <Grid item className='formDiv__btn'>
                         <Button type='submit' fullWidth variant='contained' style={{ background: '#001B5F' }} size='large'>
